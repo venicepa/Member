@@ -1,0 +1,30 @@
+member:
+  user: Eason
+
+
+#spring:
+#  thymeleaf:
+#    cache: false
+#    prefix: classpath:/templates/    # 設定去templates資料夾找html檔案
+#    suffix: .html
+#    encoding: UTF-8
+#    mode: HTML5
+#    check-template-location: true
+
+spring:
+  devtools:
+    livereload:
+      enabled: true # 啟用LiveReload服務端
+      port: 35729 # LiveReload服務埠
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: file:src/main/resources/templates/ #should add this or hot swap will not work.
+  resources: # Static resources
+    static-locations: file:src/main/resources/static/
+    cache:
+      period: 0
+
+server:
+  port: 8081
